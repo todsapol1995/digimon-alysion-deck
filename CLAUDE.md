@@ -95,6 +95,7 @@ Shortcut บน Desktop: `Deck Analyzer.lnk` → `wscript "Open Deck Analyzer.vb
   `report.js` = เขียน `เด็คแนะนำ.md` + `data/recommended.json` (ข้อความแผน/จุดอ่อน/คราฟอยู่ใน NOTES), `upg.js` = หาการ์ดที่ขาดเทียบ archetype ชุมชน,
   `dump.js <สี>` = ตารางการ์ดที่มีพร้อม effect (ต้องรัน `build.js .` ก่อนเพื่อสร้าง analysis.json),
   `archlist.js . <Color> <Archetype> [minPct]` = รายการเฉลี่ยของ archetype ชุมชน (% ใส่, ×ใบ) เทียบจำนวนที่มี — ใช้ตอนได้การ์ดชุดใหญ่,
+  `score.js . <Color>` = ตารางมูลค่าการ์ดที่มี (% ทั้งสี / % archetype / จำนวนใบนิยม / ★ Staple) ใช้เลือกตัด-เติม,
   `sim.js . [Color] [--n=4000]` = จำลองเล่นคนเดียว (goldfish, memory 3/เทิร์น, ไม่มีคู่แข่ง) วัดมือแรก/เทิร์นถึง Lv5-6/เทิร์นที่ทำอะไรไม่ได้/
   % ที่การ์ดมีเงื่อนไขใช้ได้ (`COND` ในไฟล์) — ใช้เทียบก่อน/หลังปรับเด็ค ไม่ใช่ win rate
   (2026-11-28: เอา Immortal Vampire ×2 ออกจากม่วง, Lucemon ออกจากเหลือง; Jack Raid คงไว้ ×3 ตามที่ผู้ใช้แย้ง — ตัวจำลองต้องนับ security ที่โดนตีลง trash ด้วย ไม่งั้นการ์ดสาย trash ดูแย่เกินจริง)
