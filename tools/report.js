@@ -15,21 +15,21 @@ const NOTES = {
   },
   Blue: {
     plan: "Yukinamon ตัวเต็มแบบเด็คชุมชน: ตัดการ์ดใต้ตัวคู่แข่งทุกจังหวะ — Renamon SD2-02 (ลงแล้วตัด 1 + inherit ตีแล้วตัด), Viximon SD2-01 (inherit ตีแล้วตัด), Sekkamon SD2-04 (วิวัฒน์แล้วตัด 2 + inherit ตีแล้ว unsuspend), Valner SD2-06 (ตั้ง memory 3 + พักตัวเพื่อตัด 1), Yukinamon BD2-007 (ตัด 3 + Blocker). จบด้วย Yukinamon SD2-05 ×4: ตีตัวที่ยังไม่นอนได้ และในการต่อสู้นับ 'จำนวนการ์ดใต้' แทน DP → ตัวคู่แข่งที่โดนตัดจนเหลือน้อยแพ้หมด. Renamon BD2-002 ค้นการ์ด ALYSION, Tenkomon SD2-03 จั่ว, Joe Kido ได้ memory ทุกครั้งที่ตัด, Pale Death เด้งตัว Lv.4 ลงมา, Hearts Attack ตัดการ์ดใต้ทั้งหมดของตัวเดียว. Gabumon ST2-03 ×4 (inherit: ตีแล้วตัดการ์ดใต้ตัว Lv.5 ลงมา) ทำให้ตัวบนทุกตัวตัดได้อีกจังหวะ, WereGarurumon ST2-08 ×2 (inherit: Security A. +1 เมื่อคู่แข่งมีตัวที่ไม่มีการ์ดใต้ — ซึ่งเด็คนี้สร้างให้เกิดเอง) ทำให้ Yukinamon ตี security ได้ 2 ใบ, Hammer Spark ×2 (+1 memory ฟรี) เร่งขึ้น Yukinamon เร็วขึ้น",
-    weak: "Lv.4 เหลือ 9 ใบ (Lobomon 1); Hammer Spark มี 2 ใบ (เด็คชุมชนใส่ ~3); เจอเด็คที่ลงตัวไม่มีการ์ดใต้เยอะๆ (เช่น rookie rush) แผนตัดการ์ดใต้จะทำอะไรไม่ได้ ต้องพึ่ง Pale Death / Yukinamon ตีตรง",
+    weak: "Lv.4 9 ใบ (Lobomon 2 — ได้เพิ่มจาก BD-04); Hammer Spark มี 2 ใบ (เด็คชุมชนใส่ ~3); เจอเด็คที่ลงตัวไม่มีการ์ดใต้เยอะๆ (เช่น rookie rush) แผนตัดการ์ดใต้จะทำอะไรไม่ได้ ต้องพึ่ง Pale Death / Yukinamon ตีตรง",
     ups: [["BD2-003", 2], ["BD2-004", 1], ["BD2-002", 1], ["BD2-008", 1], ["BD2-001", 1], ["ST2-13", 1], ["BD2-007", 1]],
     upsNote: "เติมการ์ดซอง BD-02 ให้ครบ 4 (ใส่ 79–95% ของเด็ค Yukinamon ชุมชน) + Hammer Spark ใบที่ 3 — Yukinamon BD2-007 ใบที่ 3 คือส่วนที่แพงที่สุดในยอดนี้ (800 CP), ไม่เอาจะเหลือ 560 CP",
   },
   Yellow: {
-    plan: "คอนโทรลลด DP: แทบทุกตัวมีเอฟเฟกต์ −DP ตอนลง/วิวัฒน์ (Angemon −3000, Meicoomon −4000, MagnaAngemon −3000, Mistymon 2×−3000, SlashAngemon −8000, WarGrowlmon Digi-Burst −4000) + option Blast Fire (ตั้ง DP = 3000) / Symphony No.1 (−7000) / Eden's Javelin. Kentaurosmon ลด Security Attack ของคู่แข่งได้ 5 ตัว และ Salamon/Magnadramon/Tactical Retreat ช่วยเติม security เมื่อโดนกดดัน. Kari Kamiya ให้ memory เมื่อ security เหลือ ≤3",
-    weak: "Tamer สีเหลืองมีแค่ Kari ×2 → RizeGreymon/ShineGreymon ใช้ความสามารถได้ไม่เต็ม (เลยใส่ ShineGreymon ไม่ได้); แรงบุกช้า ถ้าคู่แข่งบุกเร็วมาก security จะหมดก่อนตั้งตัว",
+    plan: "คอนโทรลลด DP: แทบทุกตัวมีเอฟเฟกต์ −DP ตอนลง/วิวัฒน์ (Angemon −3000, Meicoomon −4000, MagnaAngemon −3000, Mistymon 2×−3000, SlashAngemon −8000, WarGrowlmon Digi-Burst −4000) + option Blast Fire (ตั้ง DP = 3000) / Symphony No.1 (−7000) / Eden's Javelin. Kentaurosmon ลด Security Attack ของคู่แข่งได้ 5 ตัว และ Salamon/Magnadramon/Tactical Retreat ช่วยเติม security เมื่อโดนกดดัน. Kari Kamiya ให้ memory เมื่อ security เหลือ ≤3. ใหม่จาก BD-04: Purge Shine ×2 (คู่แข่งทั้งกระดาน −3000 — กวาด Lv.3/Lv.4), Tai Kamiya (+1000 DP ทุกตัวเมื่อ security ≤3 และได้ memory เมื่อลบด้วย DP 0), Lucemon SEC (ลงถูกเมื่อ trash ≥10 ใบ)",
+    weak: "Tamer สีเหลืองมีแค่ Kari ×2 + Tai ×1 → RizeGreymon/ShineGreymon ใช้ความสามารถได้ไม่เต็ม (เลยใส่ ShineGreymon ไม่ได้); แรงบุกช้า ถ้าคู่แข่งบุกเร็วมาก security จะหมดก่อนตั้งตัว",
     ups: [["BT1-087", 4], ["BT2-039", 2], ["BT1-107", 3], ["BT3-003", 2]],
-    upsNote: "T.K. Takaishi ใส่ 100% ในเด็คเหลืองชุมชน (memory + ค้น security), Magnadramon เพิ่มอีก 2 ให้ครบ 3, Holy Wave / Upamon ราคาถูก. Lucemon BT4-115 (SEC, 88%) แรงแต่แพง 4,800 CP",
+    upsNote: "T.K. Takaishi ใส่ 100% ในเด็คเหลืองชุมชน (memory + ค้น security), Magnadramon เพิ่มอีก 2 ให้ครบ 3, Holy Wave / Upamon ราคาถูก. Lucemon BT4-115 ได้มา 1 ใบใส่แล้ว (เด็ค Magnadramon ชุมชนใส่ ~3) ใบที่ 2 = 2,400 CP",
   },
   Green: {
-    plan: "ล็อกบอร์ดด้วยการ suspend: Kuwagamon / Puppet Pummel / Cherry Blast / Tentomon (inherit) ทำให้ตัวคู่แข่งนอนอยู่ → Lillymon / Puppetmon ห้าม unsuspend → Terrors Cluster ส่งตัวที่นอนอยู่ลงใต้เด็ค. ตัวบุก Kabuterimon / Gargomon ได้ +1000 DP ต่อตัวคู่แข่งที่นอนอยู่, HerculesKabuterimon ×3 มี Piercing + unsuspend ได้. Dokugumon ค้น Lv5+Lv6 ช่วยหาตัวจบ",
-    weak: "Digi-Egg 3 ใบ; Tamer มี Mimi/Ken อย่างละใบ; Rosemon มี 1 ใบ; ไม่มีการลบตัวตรงๆ เลย (พึ่งการ suspend + ตีทะลุ) — แพ้ Blocker หนาๆ (สีดำ)",
+    plan: "ล็อกบอร์ดด้วยการ suspend: Kuwagamon / Puppet Pummel / Cherry Blast / Tentomon (inherit) ทำให้ตัวคู่แข่งนอนอยู่ → Lillymon / Puppetmon ห้าม unsuspend → Terrors Cluster ส่งตัวที่นอนอยู่ลงใต้เด็ค. ตัวบุก Kabuterimon / Gargomon ได้ +1000 DP ต่อตัวคู่แข่งที่นอนอยู่, HerculesKabuterimon ×3 มี Piercing + unsuspend ได้. Dokugumon ค้น Lv5+Lv6 ช่วยหาตัวจบ. ใหม่จาก BD-04: Lalamon ×4 (inherit ของสาย Rosemon) + Lilamon ×2 (Digi-Burst suspend / ตีแล้ว suspend เพิ่มเมื่อมี Tamer)",
+    weak: "Tamer มี Mimi/Ken อย่างละใบ; Rosemon มี 1 ใบ; ไม่มีการลบตัวตรงๆ เลย (พึ่งการ suspend + ตีทะลุ) — แพ้ Blocker หนาๆ (สีดำ)",
     ups: [["BT1-089", 2], ["ST4-14", 3], ["ST4-15", 3], ["BT2-004", 1], ["BD1-009", 2]],
-    upsNote: "Mimi Tachikawa ใส่ 89–100% (memory + ฟักไข่), Izzy ST4-14 ได้ memory ทุกครั้งที่คู่แข่ง suspend — เข้ากับแผนนี้มาก. อยากได้แรงขึ้น: Rosemon +2 (1,600 CP), Lilamon BT4-059 ×3 (2,400 CP)",
+    upsNote: "Mimi Tachikawa ใส่ 89–100% (memory + ฟักไข่), Izzy ST4-14 ได้ memory ทุกครั้งที่คู่แข่ง suspend — เข้ากับแผนนี้มาก. อยากได้แรงขึ้น: Rosemon +2 (1,600 CP), Lilamon ใบที่ 3 (800 CP)",
   },
   Black: {
     plan: "กำแพง Blocker: ตัว Blocker เต็มทุกเลเวล (Pteromon, Gotsumon, Galemon, Sealsdramon 6000, Guardromon 7000, Andromon, BanchoGolemon, WarGreymon BT2-065, BryweLudramon inherit Blocker) + Shoto Kazama ได้ memory เมื่อมี Blocker, Atomic Ray ปลุก Blocker ให้กันซ้ำ. ฝั่งบุกใช้ MetalGreymon BT2-063 ×4 (Reboot, inherit Security A. +1) / GrandGalemon / Zephagamon และ Beast Cyclone เพิ่ม Security A. +1 ให้ทุก Blocker/Reboot. ลบตัวด้วย Andromon BD2-005, Baboongamon, Looking Back…, Infinity Cannon",
@@ -40,8 +40,8 @@ const NOTES = {
   Purple: {
     plan: "วนซากจาก trash: ตัว Lv3 ส่วนใหญ่มี On Deletion (จั่ว/ได้ memory/ทิ้งการ์ดลง trash) → Night Raid ×3 เรียก Lv3 กลับจาก trash ฟรี, Immortal Vampire ×2 เรียก Myotismon กลับจาก trash ฟรี. Myotismon BD2-006 ×4 ลบ Lv3 ตอนวิวัฒน์ + inherit Retaliation (ตายแล้วลากคู่ต่อสู้ไปด้วย), Devimon/Saberdramon ก็มี Retaliation. ตัวจบ VenomMyotismon / Beelzemon (Impmon วิวัฒน์ได้ถูกเมื่อ trash ≥10) / Plutomon / Millenniummon (ส่งตัวคู่แข่งลงใต้เด็ค, ตายแล้วเกิดใหม่). Matt Ishida ×2 ตั้ง memory เป็น 3 ทุกเทิร์น + ดึงการ์ดม่วง/Option กลับจาก trash, Jack Raid ×3 ได้ memory ตามจำนวน trash, Gabumon BT2-069 ×3 (ตัวเริ่มที่ดีที่สุดของสี ตายแล้วจั่ว 2 ทิ้ง 1 = เติม trash ไปด้วย). Death Claw ×2 (1 memory) สละตัวเราเองเพื่อลบตัว Lv.4 ลงมาของคู่แข่ง — สละ Gabumon/Impmon/Tapirmon แล้วได้ On Deletion (จั่ว/ลง trash) เป็นของแถม และยังมี Security effect ลบตัว Lv.4 ลงมาด้วย",
     weak: "ตัวบอสส่วนใหญ่มีใบเดียว (VenomMyotismon 2) → ต้องพึ่งการวนจาก trash; Matt มี 2 ใบ (เด็คชุมชนใส่ 3–4); Digimon ส่วนใหญ่ DP ต่ำ ถ้าคู่แข่งไม่ยอมแลกตัว Retaliation จะไม่ได้ทำงาน",
-    ups: [["BT3-006", 3], ["BT2-090", 1], ["BT3-079", 3], ["BT3-092", 1]],
-    upsNote: "DemiMeramon (ไข่ จั่วเมื่อตาย) ใส่ 76% ของเด็คม่วงทั้งหมด, Matt ใส่ 83% ของเด็คสายนี้ (Gabumon BT2-069 ×3 และ Death Claw ×2 มีครบแล้ว), Tsukaimon ถูกและเติมเอนจิน trash, MaloMyotismon เข้ากับ Arukenimon/Mummymon ที่คุณมีอยู่. งบเยอะ: Lilithmon ×3 (2,400 CP)",
+    ups: [["BT3-006", 3], ["BT2-090", 1], ["BT3-092", 1]],
+    upsNote: "DemiMeramon (ไข่ จั่วเมื่อตาย) ใส่ 76% ของเด็คม่วงทั้งหมด, Matt ใส่ 83% ของเด็คสายนี้ (Gabumon BT2-069 ×3 และ Death Claw ×2 มีครบแล้ว), MaloMyotismon เข้ากับ Arukenimon/Mummymon ที่คุณมีอยู่. งบเยอะ: Lilithmon ×3 (2,400 CP)",
   },
 };
 const kind = (c) => c.type === "Digi-Egg" ? "Digi-Egg" : c.type === "Digimon" ? "Lv." + c.level : c.type;
