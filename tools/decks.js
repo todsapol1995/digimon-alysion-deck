@@ -14,15 +14,15 @@ const DECKS = {
       "BT2-091": 3, "BT1-090": 2, "SD1-07": 2, "BT4-100": 1 } },
   Blue: { name: "Blue Yukinamon (ALYSION ตัดใต้การ์ด)", arch: ["Yukinamon"], egg: { "SD2-01": 3, "BD2-001": 2 },
     main: { "SD2-02": 4, "BD2-002": 3, "BT1-029": 2, "ST2-03": 4,
-      "SD2-03": 4, "BD2-003": 2, "BT4-025": 2, "BT2-025": 1,
-      "SD2-04": 4, "BD2-004": 3, "ST2-08": 2,
+      "SD2-03": 4, "BD2-003": 2, "BT4-025": 3, "BT2-025": 1,
+      "SD2-04": 4, "BD2-004": 3, "ST2-08": 1,
       "SD2-05": 4, "BD2-007": 2, "BT1-084": 1,
       "SD2-06": 4, "BD2-008": 2, "BT2-085": 1,
       "ST2-13": 2, "SD2-07": 2, "BT1-099": 1 } },
   Yellow: { name: "Yellow Angel −DP Control", arch: ["Magnadramon", "Seraphimon", "WarGreymon"], egg: { "BT1-006": 4, "BT4-003": 1 },
-    main: { "BT2-034": 2, "BT3-033": 1, "BT2-033": 2, "BT4-037": 2, "BT4-038": 2, "BT1-050": 1, "BT1-045": 1, "BT4-094": 1,
+    main: { "BT2-034": 2, "BT3-033": 1, "BT2-033": 2, "BT4-037": 2, "BT4-038": 2, "BT1-050": 1, "BT1-045": 1, "BT1-047": 1, "BT4-094": 1,
       "BT2-035": 4, "BT3-037": 3, "BT1-055": 1, "BT4-041": 1, "BT4-040": 2,
-      "BD1-008": 3, "BT3-039": 2, "BT2-038": 2, "BT4-046": 1, "BT1-061": 1, "BT2-037": 1,
+      "BD1-008": 3, "BT3-039": 2, "BT2-038": 2, "BT4-046": 1, "BT1-061": 1,
       "BT1-062": 2, "BT3-043": 2, "BT2-039": 1, "BT4-048": 1, "BT3-042": 1,
       "BT2-087": 2,
       "BT1-106": 1, "BT1-105": 3, "BT2-098": 1, "BT4-106": 2, "BT4-105": 1 } },
@@ -34,19 +34,19 @@ const DECKS = {
       "BT1-089": 1, "BT3-094": 1,
       "BT2-100": 3, "BT2-101": 2, "BT2-102": 2, "BT1-113": 1 } },
   Black: { name: "Black Blocker Wall (Zephagamon)", arch: ["Zephagamon", "Craniamon"], egg: { "BD3-001": 4, "BT2-005": 1 },
-    main: { "BD3-003": 1, "BT2-054": 3, "BT2-055": 3, "BT3-060": 3, "BT2-052": 2,
+    main: { "BD3-003": 1, "BT2-054": 3, "BT2-055": 3, "BT3-060": 4, "BT2-052": 2,
       "BD3-004": 1, "BT4-067": 3, "BT2-058": 2, "BT2-057": 2, "BT3-067": 1, "BT4-068": 2,
-      "BD3-005": 2, "BT2-063": 4, "BD2-005": 2, "BT2-061": 2,
+      "BD3-005": 2, "BT2-063": 4, "BD2-005": 2, "BT2-061": 1,
       "BD3-007": 1, "BT2-065": 1, "BT4-073": 2, "BT3-072": 2, "BT3-073": 1,
       "BD3-008": 2, "BT2-089": 2,
       "BT2-106": 1, "BT3-106": 1, "BT3-107": 2, "BT4-096": 1, "BD3-009": 1 } },
   Purple: { name: "Purple Myotismon Recursion", arch: ["MaloMyotismon", "Plutomon", "Beelzemon"], egg: { "BT2-007": 3, "BT3-006": 1, "BT2-008": 1 },
-    main: { "BT2-068": 3, "BT2-069": 3, "BT2-070": 1, "BT4-079": 2, "BT4-076": 2,
-      "BT2-074": 2, "BT2-072": 2, "BT2-071": 2, "BT3-080": 1, "BT4-081": 1,
+    main: { "BT2-068": 3, "BT2-069": 3, "BT2-070": 1, "BT4-079": 2, "BT4-076": 3,
+      "BT2-074": 2, "BT2-072": 2, "BT2-071": 2, "BT3-080": 2, "BT4-081": 2,
       "BT2-090": 2,
-      "BD2-006": 4, "BT2-075": 2, "BT3-088": 1, "BT4-083": 3,
+      "BD2-006": 4, "BT2-075": 1, "BT3-088": 1, "BT4-083": 3,
       "BT2-079": 2, "BT2-111": 1, "BT4-089": 1, "BT4-087": 2, "BT3-090": 1, "BT2-083": 1,
-      "BT4-111": 3, "BT2-108": 3, "BD4-010": 1, "BT2-110": 2, "ST6-15": 2 } },
+      "BT4-111": 3, "BT2-108": 3, "BT2-110": 1, "ST6-15": 2 } },
 };
 module.exports = DECKS;
 if (require.main === module) {
@@ -64,6 +64,10 @@ if (require.main === module) {
       sh[bucket(c)] = (sh[bucket(c)] || 0) + n;
       part === "main" ? (m += n) : (e += n);
     }
-    console.log(`${col}: main ${m} egg ${e} ${JSON.stringify(sh)} ${err.length ? "ERR " + err.join("; ") : "OK"}`);
+    // curve target (ranked launch ratio, from user 2026-11-28): Lv3 12–14, Lv4 10–12, Lv5 8–9, Lv6–7 6–8, Tamer+Option 9–12, Egg 4–5
+    const g = k => sh[k] || 0, warn = [];
+    for (const [lab, v, lo, hi] of [["Lv3", g("L3"), 12, 14], ["Lv4", g("L4"), 10, 12], ["Lv5", g("L5"), 8, 9], ["Lv6-7", g("L6") + g("L7"), 6, 8], ["Tamer+Option", g("Tamer") + g("Option"), 9, 12], ["Egg", e, 4, 5]])
+      if (v < lo || v > hi) warn.push(`${lab} ${v} (ควร ${lo}–${hi})`);
+    console.log(`${col}: main ${m} egg ${e} ${JSON.stringify(sh)} ${err.length ? "ERR " + err.join("; ") : "OK"}${warn.length ? " | CURVE " + warn.join(", ") : ""}`);
   }
 }
