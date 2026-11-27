@@ -1069,6 +1069,8 @@ async function refreshAndLoad() {
   if (!ONLINE) try { await fetch("/api/refresh?maxAge=60", { method: "POST" }); } catch {}
   await load();
 }
+// Phones: the filter panel is folded; tapping its "Filter" heading opens/closes it
+$("#filters > h3").addEventListener("click", () => $("#filters").classList.toggle("open"));
 setEditUi();
 refreshAndLoad();
 setInterval(refreshAndLoad, 60 * 60 * 1000);
