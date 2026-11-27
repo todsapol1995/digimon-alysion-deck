@@ -94,7 +94,10 @@ Shortcut บน Desktop: `Deck Analyzer.lnk` → `wscript "Open Deck Analyzer.vb
 - เครื่องมือใน `tools/` (รันจากโฟลเดอร์โปรเจกต์): `decks.js` = รายการเด็คที่จัดมือ (`node tools/decks.js .` ตรวจกฎ/จำนวน),
   `report.js` = เขียน `เด็คแนะนำ.md` + `data/recommended.json` (ข้อความแผน/จุดอ่อน/คราฟอยู่ใน NOTES), `upg.js` = หาการ์ดที่ขาดเทียบ archetype ชุมชน,
   `dump.js <สี>` = ตารางการ์ดที่มีพร้อม effect (ต้องรัน `build.js .` ก่อนเพื่อสร้าง analysis.json),
-  `archlist.js . <Color> <Archetype> [minPct]` = รายการเฉลี่ยของ archetype ชุมชน (% ใส่, ×ใบ) เทียบจำนวนที่มี — ใช้ตอนได้การ์ดชุดใหญ่
+  `archlist.js . <Color> <Archetype> [minPct]` = รายการเฉลี่ยของ archetype ชุมชน (% ใส่, ×ใบ) เทียบจำนวนที่มี — ใช้ตอนได้การ์ดชุดใหญ่,
+  `sim.js . [Color] [--n=4000]` = จำลองเล่นคนเดียว (goldfish, memory 3/เทิร์น, ไม่มีคู่แข่ง) วัดมือแรก/เทิร์นถึง Lv5-6/เทิร์นที่ทำอะไรไม่ได้/
+  % ที่การ์ดมีเงื่อนไขใช้ได้ (`COND` ในไฟล์) — ใช้เทียบก่อน/หลังปรับเด็ค ไม่ใช่ win rate
+  (2026-11-28: เอา Immortal Vampire ×2, Jack Raid ×2 ออกจากม่วง และ Lucemon ออกจากเหลือง เพราะจำลองแล้วใช้ได้ ~0–3%)
 - เด็คแต่ละสีแยกกัน ใช้การ์ดใบเดียวกันซ้ำข้ามเด็คได้ (เช่น Omnimon 1 ใบอยู่ทั้งเด็คแดงและฟ้า)
 - 2026-11-27: ผู้ใช้ได้ SD-1 (Rubeusdramon) + SD-2 (Yukinamon) ครบชุด ×4 → แดงเปลี่ยนเป็น Rubeusdramon, ฟ้าเป็น Yukinamon เต็ม
 - ถ้าผู้ใช้อัปเดตการ์ดแล้วอยากได้เด็คใหม่ → ใช้ skill **`/rebuild-decks [สี]`** (`.claude/skills/rebuild-decks/SKILL.md` มีขั้นตอนครบ)
