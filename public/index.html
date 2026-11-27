@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alysion Deck Analyzer (local)</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+<header>
+  <div class="brand">Alysion Deck Analyzer <span id="modeTag" class="muted">· local</span>
+    <a class="srclink" href="https://alysioncards.com/decks" target="_blank" rel="noopener" title="เปิดเว็บต้นทาง alysioncards.com">alysioncards.com ↗</a></div>
+  <nav>
+    <button class="tab active" data-view="arch">Archetypes</button>
+    <button class="tab" data-view="stats">สถิติตามสี</button>
+    <button class="tab" data-view="staples">★ Staple</button>
+    <button class="tab" data-view="decks">Decks</button>
+    <button class="tab" data-view="coll">การ์ดของฉัน</button>
+    <button class="tab" data-view="rec">เด็คแนะนำ</button>
+  </nav>
+  <div class="sync">
+    <span id="syncInfo" class="muted"></span>
+    <button id="refreshBtn">↻ ดึงข้อมูลใหม่</button>
+    <button id="editBtn" class="ghost" hidden></button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside id="filters">
+    <h3>Filter</h3>
+    <label>ค้นหาชื่อเด็ค / archetype
+      <input id="fSearch" type="search" placeholder="เช่น Imperialdramon" />
+    </label>
+
+    <label>มีการ์ด (ชื่อหรือรหัส) — กด Enter เพื่อเพิ่มหลายใบ
+      <div class="addrow">
+        <input id="fCard" list="cardList" placeholder="เช่น BT3-031 หรือ Gabumon" />
+        <button id="addCardBtn" title="เพิ่มการ์ดนี้">+</button>
+      </div>
+      <datalist id="cardList"></datalist>
+    </label>
+    <div id="cardChips" class="chips cardchips"></div>
+    <div id="cardMode" class="modesw" hidden>
+      <button data-m="and">ใส่ครบทุกใบ (AND)</button>
+      <button data-m="or">ใบใดใบหนึ่ง (OR)</button>
+    </div>
+
+    <div class="group">
+      <div class="glabel">สีหลัก</div>
+      <div id="fColors" class="chips"></div>
+    </div>
+
+    <label>Archetype
+      <select id="fArch"><option value="">ทั้งหมด</option></select>
+    </label>
+
+    <label>เผยแพร่ภายใน
+      <select id="fDate">
+        <option value="0">ทั้งหมด</option>
+        <option value="7">7 วัน</option>
+        <option value="30">30 วัน</option>
+        <option value="90">90 วัน</option>
+      </select>
+    </label>
+
+    <h3>แสดงเฉพาะการ์ด</h3>
+    <label class="check" title="การ์ดจากไกด์ Staple Cards at Launch ของ alysioncards.com"><input id="fStaple" type="checkbox" /> <span class="staple">★</span> เฉพาะการ์ด Staple</label>
+    <div class="group">
+      <div class="glabel">ประเภทการ์ด</div>
+      <div id="fTypes" class="chips"></div>
+    </div>
+    <div class="group">
+      <div class="glabel">Level</div>
+      <div id="fLevels" class="chips"></div>
+    </div>
+
+    <h3>การจัดกลุ่ม</h3>
+    <label>Core ≥ <b id="coreVal"></b>% ของเด็คในกลุ่ม
+      <input id="fCore" type="range" min="50" max="100" step="5" value="80" />
+    </label>
+    <label>Flex ≥ <b id="flexVal"></b>% (ต่ำกว่านี้ = Tech)
+      <input id="fFlex" type="range" min="5" max="70" step="5" value="30" />
+    </label>
+    <label>ซ่อน archetype ที่มีน้อยกว่า <b id="minVal"></b> เด็ค
+      <input id="fMin" type="range" min="1" max="10" step="1" value="2" />
+    </label>
+    <label class="check"><input id="fMerge" type="checkbox" checked /> รวมกลุ่มเล็กเข้ากลุ่มที่คล้ายกัน</label>
+    <label class="check" title="เด็คที่การ์ดและจำนวนใบตรงกันทุกใบ นับเป็นเด็คเดียว (เก็บอันที่อัปล่าสุด)"><input id="fDedupe" type="checkbox" checked /> นับเด็คที่ซ้ำกันทุกใบเป็น 1 เด็ค</label>
+    <button id="resetBtn" class="ghost">รีเซ็ต filter</button>
+    <p class="hint">Archetype ถูกเดาจาก <b>สีหลัก + Digimon Lv.6+ ตัวหลัก</b> ของแต่ละเด็ค (ถ้าไม่มี Lv.6+ จะใช้ Lv.5) กด ✎ ข้างชื่อกลุ่มเพื่อเปลี่ยนชื่อ หรือรวมกลุ่ม (ตั้งชื่อซ้ำกัน)</p>
+  </aside>
+
+  <main>
+    <div id="summary" class="summary"></div>
+    <section id="cardInsight" class="insight" hidden></section>
+    <section id="archView"></section>
+    <section id="statsView" hidden></section>
+    <section id="staplesView" hidden></section>
+    <section id="deckView" hidden></section>
+    <section id="collView" hidden></section>
+    <section id="recView" hidden></section>
+  </main>
+</div>
+
+<div id="hoverPreview" hidden><img alt="" /></div>
+
+<div id="cardModal" class="modal" hidden>
+  <div class="mbox" role="dialog" aria-modal="true">
+    <button class="mclose" title="ปิด (Esc)">✕</button>
+    <div class="mimg"><img alt="" /></div>
+    <div class="minfo"></div>
+  </div>
+</div>
+
+<template id="tplCardRow">
+  <div class="crow">
+    <img loading="lazy" alt="" />
+    <div class="cinfo">
+      <div class="cname"></div>
+      <div class="cid muted"></div>
+    </div>
+    <div class="cbar"><div class="fill"></div><span class="pct"></span></div>
+    <div class="ccopies"></div>
+    <div class="cdist"></div>
+  </div>
+</template>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
