@@ -37,7 +37,7 @@ function game(d, stats) {
   const deck = shuffle(expand(d.main)), eggs = shuffle(expand(d.egg));
   let hand = deck.splice(0, 5);
   if (!hand.some(c => lvl(c) === 3)) { deck.push(...hand); shuffle(deck); hand = deck.splice(0, 5); stats.mull++; } // 1 mulligan
-  deck.splice(0, 5); // security
+  const sec = deck.splice(0, 5); // security
   const s = { trash: [], board: [], tamers: [], mem: 0, hand };
   if (hand.some(c => lvl(c) === 3)) stats.open3++;
   let breed = null, reach5 = 0, reach6 = 0;
@@ -95,6 +95,8 @@ function game(d, stats) {
     if (!acted && turn >= 2) stats.brick++;
     // trade: from T4 every other turn our oldest non-top stack dies
     if (turn >= 4 && turn % 2 === 0 && s.board.length) { const st = s.board.shift(); s.trash.push(...st); if (st.some(c => /On Deletion\] ＜Draw|Trash the top 3 cards of your deck/.test(T(c)))) { if (/Trash the top 3/.test(T(st[0]))) s.trash.push(...deck.splice(0, 3)); } }
+    // opponent attacks: from T3 one of our security cards is checked each turn -> trash
+    if (turn >= 3 && sec.length) s.trash.push(sec.shift());
     stats.trashT6 += turn === 6 ? s.trash.length : 0;
     stats.handT6 += turn === 6 ? s.hand.length : 0;
   }
