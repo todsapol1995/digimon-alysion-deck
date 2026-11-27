@@ -101,7 +101,11 @@ Shortcut บน Desktop: `Deck Analyzer.lnk` → `wscript "Open Deck Analyzer.vb
   - `recommended.json` เก็บ `builtAt` + `collectionSnapshot` (คอลเลกชันตอนจัด) → แท็บเด็คแนะนำแสดงกล่องสีส้ม
     "คอลเลกชันเปลี่ยนตั้งแต่จัดเด็คครั้งล่าสุด" พร้อมการ์ดที่ได้เพิ่ม/ลดลง; รัน report.js ใหม่แล้วกล่องจะหาย
 
-## ออนไลน์ (GitHub Pages) — เตรียมไว้ 2026-11-27 → คู่มือ `ขึ้นเว็บออนไลน์.md`
+## ออนไลน์ (GitHub Pages) — ใช้งานแล้ว 2026-11-27 → คู่มือ `ขึ้นเว็บออนไลน์.md`
+- เว็บ: https://todsapol1995.github.io/digimon-alysion-deck/ · repo `todsapol1995/digimon-alysion-deck` (public, branch main)
+- โฟลเดอร์นี้เป็น git repo แล้ว (identity = noreply ของผู้ใช้, ตั้งใน repo config) · Git ติดตั้งที่ `C:\Program Files\Git` —
+  shell ของ Claude อาจยังไม่มีใน PATH: ใช้ `$env:Path = [Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [Environment]::GetEnvironmentVariable("Path","User")` ก่อน
+  · login เก็บใน Git Credential Manager แล้ว → `git push` จาก Claude ได้เลย
 - `.github/workflows/deploy.yml`: ทุกชม. + ทุก push main + กดเอง → `node sync.mjs` แล้ว deploy `public/` + `data/*.json` ขึ้น Pages
   (cards.json/decks.json **ไม่ commit** — อยู่ใน .gitignore, สร้างใหม่ทุกรอบ)
 - `app.js`: `ONLINE` = hostname ไม่ใช่ localhost (ทดสอบบนเครื่องด้วย `?static=1`); path ทั้งหมดเป็น relative (ใช้ใต้ `/<repo>/` ได้)
